@@ -2,6 +2,9 @@ package com.wix.reactnativenotifications.core.notification;
 
 import android.os.Bundle;
 
+import com.google.firebase.messaging.RemoteMessage;
+
+
 public class PushNotificationProps {
 
     protected Bundle mBundle;
@@ -26,6 +29,10 @@ public class PushNotificationProps {
 
     public String getBody() {
         return mBundle.getString("body");
+    }
+
+    public Bundle getData() {
+        return mBundle.getBundle("data");
     }
 
     public Bundle asBundle() {
